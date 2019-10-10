@@ -24,7 +24,7 @@ To get started using a persephony account, follow the instructions [here](https:
    | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | ACCOUNT_ID              | Account ID which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                                         |
    | AUTH_TOKEN              | Authentication Token which can be found under [API Keys](https://www.persephony.com/dashboard/portal/account/authentication) in Dashboard                                               |
-   | applicationId | Appliction IDs can be found under [Apps](https://www.persephony.com/dashboard/portal/applications) |
+   | APPLICATION_ID | Appliction IDs can be found under [Apps](https://www.persephony.com/dashboard/portal/applications) |
    | HOST | The url of where your app is being hosted (e.g. yourHostedApp.com)
 
  

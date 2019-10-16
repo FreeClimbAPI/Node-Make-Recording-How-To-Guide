@@ -1,14 +1,14 @@
 # Node - Make a Recording Tutorial
 
-This project serves as a guide to help you build an application with Persephony. Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. Specifically, the project will:
 
 - Creates an outgoing call to the `to` number 
 - Prompts the participant for a recording
 - Records a message from the participant
 
-## Setting up your new app within your Persephony account
+## Setting up your new app within your FreeClimb account
 
-To get started using a persephony account, follow the instructions [here](https://persephony-docs.readme.io/docs/getting-started-with-persephony).
+To get started using a FreeClimb account, follow the instructions [here](https://persephony-docs.readme.io/docs/getting-started-with-persephony).
 
 ## Setting up the Tutorial
 
@@ -29,7 +29,7 @@ To get started using a persephony account, follow the instructions [here](https:
 
  
 
-3. Provide a value for the variables `to` and `from` in makeARecording.js. The `to` number is any phone number you wish to call. This number must be [verified](https://docs.persephony.com/docs/using-your-trial-account#section-verifying-outbound-numbers). `from` is a persephony number that makes the call ([Incoming Numbers](https://www.persephony.com/dashboard/portal/numbers)).
+3. Provide a value for the variables `to` and `from` in makeARecording.js. The `to` number is any phone number you wish to call. This number must be [verified](https://docs.persephony.com/docs/using-your-trial-account#section-verifying-outbound-numbers). `from` is a FreeClimb number that makes the call ([Incoming Numbers](https://www.persephony.com/dashboard/portal/numbers)).
 
 ## Runnning the Tutorial
 

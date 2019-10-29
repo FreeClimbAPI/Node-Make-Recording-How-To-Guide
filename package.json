@@ -1,5 +1,5 @@
 {
-  "name": "node-stream-a-recording-tutorial",
+  "name": "node-make-a-recording-tutorial",
   "version": "1.0.0",
   "dependencies": {
     "@freeclimb/sdk": "^1.0.0",

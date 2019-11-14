@@ -29,7 +29,7 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
 
  
 
-3. Provide a value for the variables `to` and `from` in makeARecording.js. The `to` number is any phone number you wish to call. This number must be [verified](https://docs.freeclimb.com/docs/using-your-trial-account#section-verifying-outbound-numbers). `from` is a FreeClimb number that makes the call ([Incoming Numbers](https://www.freeclimb.com/dashboard/portal/numbers)).
+3. Provide a value for the variables `to` and `from` in makeARecording.js. The `to` number is any phone number you wish to call. This number must be [verified](https://docs.freeclimb.com/docs/using-your-trial-account#section-verifying-outbound-numbers) (for trial users) and in E.164 format. `from` is a FreeClimb number that makes the call ([Incoming Numbers](https://www.freeclimb.com/dashboard/portal/numbers)).
 
 ## Runnning the Tutorial
 

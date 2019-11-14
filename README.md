@@ -1,6 +1,6 @@
 # Node - Make a Recording Tutorial
 
-This project serves as a guide to help you build an application with FreeClimb. Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. View this tutorial on [FreeClimb.com](https://docs.freeclimb.com/docs/make-a-recording#section-javascript). Specifically, the project will:
 
 - Creates an outgoing call to the `to` number 
 - Prompts the participant for a recording

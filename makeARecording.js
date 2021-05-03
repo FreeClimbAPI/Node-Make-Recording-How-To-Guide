@@ -10,8 +10,8 @@ const host = process.env.HOST
 const port = process.env.PORT || 80
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
-const authToken = process.env.AUTH_TOKEN
-const freeclimb = freeclimbSDK(accountId, authToken)
+const apiKey = process.env.API_KEY
+const freeclimb = freeclimbSDK(accountId, apiKey)
 const applicationId = process.env.APPLICATION_ID
 
 // Invoke create method to initiate the asynchronous outdial request

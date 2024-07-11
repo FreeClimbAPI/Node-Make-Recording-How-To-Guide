@@ -1,6 +1,6 @@
-# Node - Make Recording Tutorial
+# Node - Make Recording How-To Guide
 
-This project serves as a guide to help you build an application with FreeClimb. View this tutorial on [FreeClimb.com](https://docs.freeclimb.com/docs/make-a-recording#section-nodejs). Specifically, the project will:
+This project serves as a guide to help you build an application with FreeClimb. View this how-to guide on [FreeClimb.com](https://docs.freeclimb.com/docs/make-a-recording#section-nodejs). Specifically, the project will:
 
 - Creates an outgoing call to the `to` number 
 - Prompts the participant for a recording
@@ -10,7 +10,7 @@ This project serves as a guide to help you build an application with FreeClimb. 
 
 To get started using a FreeClimb account, follow the instructions [here](https://docs.freeclimb.com/docs/getting-started-with-freeclimb).
 
-## Setting up the Tutorial
+## Setting up the how-to guide
 
 1. Install the node packages necessary using command:
 
@@ -18,7 +18,7 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
    $ yarn install
    ```
 
-2. Configure environment variables (this tutorial uses the [dotenv package](https://www.npmjs.com/package/dotenv)).
+2. Configure environment variables (this how-to guide uses the [dotenv package](https://www.npmjs.com/package/dotenv)).
 
    | ENV VARIABLE            | DESCRIPTION                                                                                                                                                                             |
    | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
 
 3. Provide a value for the variables `to` and `from` in makeARecording.js. The `to` number is any phone number you wish to call. This number must be [verified](https://docs.freeclimb.com/docs/using-your-trial-account#section-verifying-outbound-numbers) (for trial users) and in E.164 format. `from` is a FreeClimb number that makes the call ([Incoming Numbers](https://www.freeclimb.com/dashboard/portal/numbers)).
 
-## Runnning the Tutorial
+## Runnning the how-to guide
 
 1. Run the application using command:
 
@@ -39,6 +39,6 @@ To get started using a FreeClimb account, follow the instructions [here](https:/
    $ node makeARecording.js
    ```
 
-## Getting Help
+## Getting help
 
 If you are experiencing difficulties, [contact support](https://freeclimb.com/support).

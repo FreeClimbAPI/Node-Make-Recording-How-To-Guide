@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const freeclimbSDK = require('@freeclimb/sdk')
+const { PerclScript, Say, RecordUtterance, Play, Hangup } = require('@freeclimb/sdk')
 
 const app = express()
 app.use(bodyParser.json())
@@ -11,33 +12,35 @@ const port = process.env.PORT || 80
 // your freeclimb API key (available in the Dashboard) - be sure to set up environment variables to store these values
 const accountId = process.env.ACCOUNT_ID
 const apiKey = process.env.API_KEY
-const freeclimb = freeclimbSDK(accountId, apiKey)
+const to = 'YOUR_TO_NUMBER'
+const from = 'YOUR_FROM_NUMBER'
 const applicationId = process.env.APPLICATION_ID
+const configuration = freeclimbSDK.createConfiguration({ accountId, apiKey })
+const freeclimb = new freeclimbSDK.DefaultApi(configuration)
 
-// Invoke create method to initiate the asynchronous outdial request
-freeclimb.api.calls.create(to, from, applicationId).catch(err => {/* Handle Errors */ })
+freeclimb.makeACall({ to, from, applicationId, callConnectUrl: `${host}/incomingCall` }).catch(err => { console.log(err) })
 
-// Handles incoming calls. Set with 'Call Connect URL' in App Config
 app.post('/incomingCall', (req, res) => {
-  // Create PerCL say script
-  const say = freeclimb.percl.say('Hello. Please leave a message after the beep, then press one or hangup.')
-  const options = {
-    playBeep: true,
-    finishOnKey: '1'
-  }
-  // Create PerCL record utterance script
-  const record = freeclimb.percl.recordUtterance(`${host}/finishedRecording`, options)
-  const percl = freeclimb.percl.build(say, record)
-  res.status(200).json(percl)
+  res.status(200).json(new PerclScript({
+    commands: [
+      new Say({ text: "Hello. Please leave a message after the beep, then press one." }),
+      new RecordUtterance({
+        playBeep: true,
+        finishOnKey: '1',
+        actionUrl: `${host}/finishedRecording`
+      })
+    ]
+  }).build())
 })
 
 app.post('/finishedRecording', (req, res) => {
-  const recordingResponse = req.body
-  const say = freeclimb.percl.say('This is what you have recorded')
-  const play = freeclimb.percl.play(recordingResponse.recordingUrl)
-  const goodbye = freeclimb.percl.say('Goodbye')
-  const percl = freeclimb.percl.build(say, play)
-  res.status(200).json(percl)
+  res.status(200).json(new PerclScript({
+    commands: [
+      new Say({ text: "This is what you have recorded" }),
+      new Play({ file: req.body.recordingUrl }),
+      new Hangup({})
+    ]
+  }).build())
 })
 
 // Specify this route with 'Status Callback URL' in App Config
